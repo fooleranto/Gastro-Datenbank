@@ -1,0 +1,37 @@
+.REPORT
+..Datenbankjob für Tabelle Bewirtung
+..
+..Hier fügen Sie die Voreinstellungen ein.
+.INCLUDE Fontdef.txt
+..Linker Rand (page offset) 10 Zeichen, oberer Rand (margin top) 5 Zeilen
+.PO 10, MT 5, MR 10, MB 10
+..
+.PROLOG
+.USES Modul_Bewirtung-Formular
+.PRIMTABLEIS BEWIRTUNG
+.SETACCESS Bewirtung-Datum.ind
+.SELECTION BEWIRTUNG.Laufende_Nummer = GV_Datensatznummer 
+..Ausgaben, die nur zu Beginn gedruckt werden sollen.
+$(@a16i VX "Bewirtungs-Meldung" $heute+", "+$jetzt+" Uhr" r 42)
+
+.VL 65 ,VL
+.HL
+$(@a12n VX GV_Standortadresse:50:10)
+.HL
+.EVL
+..
+.KOPF
+..Kopfzeile oben auf jeder Seite
+.SETFONT a10n  
+
+..                           
+..Kopfzeile
+.Fuß
+..Fußzeile unten auf jeder Seite
+..
+.DATEN
+.INCLUDE Bewirtung-Job-Datenbereich.inc
+..
+.EPILOG
+..Ausgaben, die nur einmal am Ende gedruckt werden sollen.
+

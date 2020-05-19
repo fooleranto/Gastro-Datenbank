@@ -1,0 +1,26 @@
+..Datei Fontdef.txt
+..Definition von Fonts für Datenbankjobs
+..Stand 07.05.2020
+
+.FONT a8n = Arial,8,n
+
+.FONT a10n = Arial,10,n
+.FONT a10i = Arial,10,i
+.FONT a10b = Arial,10,b
+.FONT a10u = Arial,10,u
+.FONT a10bi = Arial,10,bi
+
+.FONT a12n = Arial,12,n
+.FONT a12i = Arial,12,i
+.FONT a12b = Arial,12,b
+.FONT a12u = Arial,12,u
+.FONT a12bu = Arial,12,bu
+.FONT a12bi = Arial,12,bi
+
+.FONT a16n = Arial,16,n
+.FONT a16i = Arial,16,i
+.FONT a16b = Arial,16,b
+.FONT a16u = Arial,16,u
+.FONT a16bi = Arial,16,bi
+
+.FONT a24bi = Arial,24,bi
