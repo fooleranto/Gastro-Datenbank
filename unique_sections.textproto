@@ -1,0 +1,888 @@
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext4-close.ogg"
+  max_dist: 3000
+  max_vol: 1200
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 40
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 176
+  index: 16
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextGeneratornearstart.ogg"
+  max_dist: 12000
+  max_vol: 5000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
+  linked_sound_id: 442
+  index: 78
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTGeneratornear.ogg"
+  max_dist: 9075
+  max_vol: 8500
+  min_vol: -60000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 10
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  index: 79
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2AFBnoise.ogg"
+  max_dist: 19257
+  max_vol: 4900
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 132
+  index: 131
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXT1back.ogg"
+  max_dist: 9075
+  max_vol: 500
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 452
+  index: 132
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext3-close.ogg"
+  max_dist: 3000
+  max_vol: 3500
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 469
+  index: 176
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16jfsdoors.ogg"
+  max_dist: 12000
+  max_vol: 7000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
+  index: 177
+}
+
+sfx_defs {
+  filename: "Twi\\oddpair.ogg"
+  max_dist: 99999
+  max_vol:1000
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  sound_group: GROUP_RWR
+  index: 208
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontAFBstart.ogg"
+  max_dist: 200000
+  max_vol: 1000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 265
+  index: 264
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndabextstart.ogg"
+  max_dist: 99999999
+  max_vol: 1000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1900
+  cone_inside_angle_deg: 110
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2000
+  index: 265
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextGenLess2.ogg"
+  max_dist: 9100
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 70
+  cone_outside_vol: -1500
+  index: 276
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndint5.ogg"
+  max_dist: 999999
+  max_vol:  450
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
+  linked_sound_id: 264
+  index: 277
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2noise.ogg"
+  max_dist: 10257
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 20
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 471
+  index: 285
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndintcompressor.ogg"
+  max_dist: 9999999
+  max_vol:  775
+  min_vol: -1000000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
+  index: 297
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext2noise.ogg"
+  max_dist: 10257
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 433
+  index: 387
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\Burner-Med-dist-Around.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2500
+  index: 410
+}
+
+sfx_defs {
+   filename: "Cockpit\\1955.ogg"
+  max_dist: 30300
+  max_vol: 2000
+  min_vol: -10000
+  primary_flag: VMS
+  sound_group: GROUP_INTERCOM
+  min_3d_dist: 50
+  cone_outside_vol: 2000
+  index: 426
+}
+
+sfx_defs {
+  filename: "Cockpit\\1500.ogg"
+  max_dist: 99999
+  max_vol: -950
+  min_vol: -10000
+  primary_flag: VMS
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 427
+}
+
+sfx_defs {
+  filename: "Common\\NozzleOpen.ogg"
+  max_dist: 6000
+  min_vol: -6000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
+  index: 428
+}
+
+sfx_defs {
+  filename: "Common\\NozzleClose.ogg"
+  max_dist: 6000
+  min_vol: -6000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
+  index: 429
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextGE2.ogg"
+  max_dist: 9985
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 285
+  index: 430
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndabextfront.ogg"
+  max_dist: 200000
+  max_vol:  1500
+  min_vol: -999999
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 800
+  cone_inside_angle_deg: 70
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 446
+  index: 431
+}
+
+sfx_defs {
+  filename: "Cockpit\\OverSpeed.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 3900
+  primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 432
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext2FarDis.ogg"
+  max_dist: 10150
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 40
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 132
+  index: 433
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext4.ogg"
+  max_dist: 3000
+  max_vol: 1500
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 450
+  index: 434
+}
+
+sfx_defs {
+  filename: "Cockpit\\pushbutton2.ogg"
+  max_dist: 0
+  max_vol: 0
+  min_vol: 0
+  primary_flag: INTERNAL_SOUND
+  sound_group: GROUP_COCKPIT
+  cone_outside_vol: -208
+  linked_sound_id: 429
+  index: 437
+}
+
+sfx_defs {
+  filename: "Cockpit\\HydrazineAir.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 10
+  primary_flag: VMS
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 438
+}
+
+sfx_defs {
+  filename: "Cockpit\\HydrazineAirBackup.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 25
+  primary_flag: VMS
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 439
+}
+
+sfx_defs {
+  filename: "Cockpit\\none.ogg"
+  max_dist: 0
+  max_vol: 0
+  min_vol: 0
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_COCKPIT
+  cone_outside_vol: -208
+  index: 440
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\burner-med-dist.ogg"
+  max_dist: 200000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 5800
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
+  linked_sound_id: 444
+  index: 441
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16jfsspark.ogg"
+  max_dist: 12000
+  max_vol: 6000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 452
+  index: 442
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufaSNDEXTsideGenerator.ogg"
+  max_dist: 4000
+  max_vol: 4800
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 270
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 285
+  index: 443
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext6.ogg"
+  max_dist: 99900
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1880
+  cone_inside_angle_deg: 20
+  cone_outside_vol: -1500
+  linked_sound_id: 445
+  index: 444
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext7.ogg"
+  max_dist: 99999
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 800
+  cone_inside_angle_deg: 70
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 410
+  index: 445
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndabext3.ogg"
+  max_dist: 200000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 457
+  index: 446
+}
+
+sfx_defs {
+  filename: "Cockpit\\G-OverLimit.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 3900
+  primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 447
+}
+
+sfx_defs {
+  filename: "Common\\airbrakewindIn.ogg"
+  max_dist: 99999999
+  max_vol: 1600
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
+  index: 448
+}
+
+sfx_defs {
+  filename: "Common\\touchdownIn.ogg"
+  max_dist: 200000
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
+  index: 449
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfront.ogg"
+  max_dist: 9999
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 990
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 464
+  index: 450
+}
+
+sfx_defs {
+  filename: "Common\\tailscrapeIN.ogg"
+  max_dist: 99999999
+  max_vol: 1600
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_outside_vol: 1000
+  linked_sound_id: 453
+  index: 451
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16jfsExhaust.ogg"
+  max_dist: 1200
+  max_vol: 6500
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
+  index: 452
+}
+
+sfx_defs {
+  filename: "Cockpit\\EngineFanDamage.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 3900
+  primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 453
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2.ogg"
+  max_dist: 9985
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 443
+  index: 454
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\burner-med-near.ogg"
+  max_dist: 60000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 280
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  index: 455
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndextdistantfrontAFB-roar.ogg"
+  max_dist: 200000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 8800
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 131
+  index: 456
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext5.ogg"
+  max_dist: 99900
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1880
+  cone_inside_angle_deg: 20
+  cone_outside_vol: -1500
+  linked_sound_id: 463
+  index: 457
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantAroundAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 461
+  index: 458
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTGenerator.ogg"
+  max_dist: 9075
+  max_vol: 4500
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 79
+  index: 459
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndintGenerator.ogg"
+  max_dist: 99999
+  max_vol: 450
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
+  cone_outside_vol: -2200
+  index: 460
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextbackdistantAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 462
+  index: 461
+}
+
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext2AFB-takeOff.ogg"
+  max_dist: 200000
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  min_3d_dist: 380
+  cone_inside_angle_deg: 110
+  cone_outside_vol: -1500
+  linked_sound_id: 456
+  index: 462
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 458
+  index: 463
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantAround.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 465
+  index: 464
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextbackdistant.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 466
+  index: 465
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextMiddistantfront.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 16
+  index: 466
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTsideGenerator.ogg"
+  max_dist: 3000
+  max_vol:  3500
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 80
+  cone_inside_angle_deg: 45
+  cone_outside_vol: -1500
+  linked_sound_id: 387
+  index: 467
+}
+
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontClose.ogg"
+  max_dist: 3300
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: LOW_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  index: 468
+}
+
+}
