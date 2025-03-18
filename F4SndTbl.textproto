@@ -1,4 +1,4 @@
-# Note: Currecnt as of Falcon BMS 4.37.0
+# Note: Currecnt as of Falcon BMS 4.36.3 & 4.37
 ######################################## 
 # INTRODUCTION
 ########################################
@@ -220,49 +220,51 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\biggun1.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 1000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 30
+  min_3d_dist: 80
   cone_outside_vol: 1000
   index: 1
 }
 sfx_defs {
   filename: "Common\\biggun2.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 1000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 30
+  min_3d_dist: 80
   cone_outside_vol: 1000
   index: 2
 }
 sfx_defs {
   filename: "Common\\bombdrop.ogg"
-  max_dist: 1000
-  max_vol: -1500
+  max_dist: 99999
+  max_vol: 1000
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_FROM_SELF
+  primary_flag: INTERNAL_SOUND
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
-  cone_outside_vol: -1500
+  cone_outside_vol: 1000
   index: 3
 }
 sfx_defs {
   filename: "Common\\airflow.ogg"
-  max_dist: 6000
-  max_vol: 3000
-  min_vol: -10000
+ max_dist: 12000
+  min_vol: -12000
+  max_vol:  3500
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
-  secondary_flags: LOW_PRIORITY
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
-  cone_outside_vol: 3000
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 80
+  cone_inside_angle_deg: 70
+  cone_outside_vol: -1500
+  linked_sound_id: 471
   index: 4
 }
 sfx_defs {
@@ -278,9 +280,9 @@ sfx_defs {
   filename: "Cockpit\\aim9caged.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 800
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_IR_TONE
   index: 6
 }
@@ -288,28 +290,28 @@ sfx_defs {
   filename: "Cockpit\\aim9uncaged.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 800
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_IR_TONE
   index: 7
 }
 sfx_defs {
   filename: "Common\\grndhit1.ogg"
-  max_dist: 12000
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 800
   index: 8
 }
 sfx_defs {
   filename: "Common\\grndhit2.ogg"
-  max_dist: 12000
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 800
   index: 9
 }
 sfx_defs {
@@ -374,20 +376,30 @@ sfx_defs {
   index: 15
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndext4-close.ogg"
+  max_dist: 3000
+  max_vol: 1200
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 40
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 176
   index: 16
 }
 sfx_defs {
   filename: "Common\\tank.ogg"
-  max_dist: 12000
+  max_dist: 99999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 180
   index: 17
 }
 sfx_defs {
@@ -412,148 +424,163 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\ricco1.ogg"
-  max_dist: 500
+  max_dist: 5000
   max_vol: -1000
-  min_vol: -10000
+  min_vol: -17000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 80
   cone_outside_vol: -1000
   index: 20
 }
 sfx_defs {
   filename: "Common\\ricco2.ogg"
-  max_dist: 500
+  max_dist: 5000
   max_vol: -1000
-  min_vol: -10000
+  min_vol: -17000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 80
   cone_outside_vol: -1000
   index: 21
 }
 sfx_defs {
   filename: "Common\\ricco3.ogg"
-  max_dist: 500
+  max_dist: 5000
   max_vol: -1000
-  min_vol: -10000
+  min_vol: -17000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 80
   cone_outside_vol: -1000
   index: 22
 }
 sfx_defs {
   filename: "Common\\ricco4.ogg"
-  max_dist: 500
+  max_dist: 5000
   max_vol: -1000
-  min_vol: -10000
+  min_vol: -17000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 80
   cone_outside_vol: -1000
   index: 23
 }
 sfx_defs {
   filename: "Common\\ricco5.ogg"
-  max_dist: 500
+  max_dist: 5000
   max_vol: -1000
-  min_vol: -10000
+  min_vol: -17000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 80
   cone_outside_vol: -1000
   index: 24
 }
 sfx_defs {
   filename: "Common\\vulstartext.ogg"
-  max_dist: 24000
-  max_vol: 500
+  max_dist: 6000
+  max_vol: 3500
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   sound_group: GROUP_SOUND_FX
   linked_sound_id: 51
-  min_3d_dist: 50
-  cone_outside_vol: 500
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4800
+  cone_inside_angle_deg: 20
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
   index: 25
 }
 sfx_defs {
   filename: "Common\\vulloopext.ogg"
-  max_dist: 24000
-  max_vol: 2000
+  max_dist: 6000
+  max_vol: 2500
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   sound_group: GROUP_SOUND_FX
   linked_sound_id: 71
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4800
+  cone_inside_angle_deg: 20
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
   index: 26
 }
 sfx_defs {
   filename: "Common\\vulendext.ogg"
-  max_dist: 24000
-  max_vol: 2000
+  max_dist: 99999999
+  max_vol: 6500
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   sound_group: GROUP_SOUND_FX
   linked_sound_id: 72
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5800
+  cone_inside_angle_deg: 20
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
   index: 27
 }
 sfx_defs {
   filename: "Common\\boomg1.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 28
 }
 sfx_defs {
   filename: "Common\\boomg2.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 29
 }
 sfx_defs {
   filename: "Common\\boomg3.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 500
   cone_outside_vol: 1500
   index: 30
 }
 sfx_defs {
   filename: "Common\\boomg4.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 31
 }
 sfx_defs {
   filename: "Common\\boomg5.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 32
 }
@@ -571,27 +598,31 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndint1.ogg"
   max_dist: 99999
+  max_vol: -500
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_ENGINE_INTERNAL
+  linked_sound_id: 460
   index: 34
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndext1.ogg"
   max_dist: 12000
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 10
-  cone_inside_angle_deg: 180
-  cone_outside_angle_deg: 100
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
   cone_outside_vol: -1500
+  linked_sound_id: 459
   index: 35
 }
 sfx_defs {
@@ -609,6 +640,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\mig21.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -623,30 +655,32 @@ sfx_defs {
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
-  cone_outside_vol: 3000
+  min_3d_dist: 3000
+  cone_outside_vol: -2500
   index: 38
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndabext.ogg"
-  max_dist: 180000
+  max_dist: 99999999
+  max_vol: 1000
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: REVERSE_DOPPLER
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 200
-  cone_inside_angle_deg: 135
-  cone_outside_angle_deg: 80
+  min_3d_dist: 1900
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
   cone_outside_vol: -2000
+  linked_sound_id: 431
   index: 39
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndabint1.ogg"
-  max_dist: 99999
-  max_vol: -500
+  max_dist: 99900
+  max_vol: -400
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -658,6 +692,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\mig23.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -667,66 +702,66 @@ sfx_defs {
 sfx_defs {
   filename: "Common\\touchdown.ogg"
   max_dist: 6000
-  max_vol: 3000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 420
   cone_outside_vol: 3000
+  linked_sound_id: 449
   index: 42
 }
 sfx_defs {
   filename: "Common\\booma1.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 43
 }
 sfx_defs {
   filename: "Common\\booma2.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 44
 }
 sfx_defs {
   filename: "Common\\booma3.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 45
 }
 sfx_defs {
   filename: "Common\\booma4.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 46
 }
 sfx_defs {
   filename: "Common\\booma5.ogg"
-  max_dist: 30300
-  max_vol: 1500
+  max_dist: 99999999
+  max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 100
+  min_3d_dist: 3000
   cone_outside_vol: 1500
   index: 47
 }
@@ -751,9 +786,9 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\jammer.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
@@ -770,6 +805,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\mig25.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -779,6 +815,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\mig31.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -787,57 +824,57 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\impacta1.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 54
 }
 sfx_defs {
   filename: "Common\\impacta2.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 55
 }
 sfx_defs {
   filename: "Common\\impacta3.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 56
 }
 sfx_defs {
   filename: "Common\\impacta4.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 57
 }
 sfx_defs {
   filename: "Common\\impacta5.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 58
 }
 sfx_defs {
@@ -882,60 +919,66 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\warning.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 63
 }
 sfx_defs {
   filename: "Cockpit\\caution.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 64
 }
 sfx_defs {
   filename: "Cockpit\\altitude.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 65
 }
 sfx_defs {
   filename: "Cockpit\\bingo.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 66
 }
 sfx_defs {
   filename: "Cockpit\\lock.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 67
 }
 sfx_defs {
   filename: "Cockpit\\pullup.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 68
@@ -952,10 +995,11 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\iff.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 70
@@ -980,6 +1024,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\a50.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -989,6 +1034,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa15.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -998,6 +1044,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f5.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1007,6 +1054,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f22.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1016,6 +1064,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\2s6.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1023,22 +1072,38 @@ sfx_defs {
   index: 77
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndextGeneratornearstart.ogg"
+  max_dist: 12000
+  max_vol: 5000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
+  linked_sound_id: 442
   index: 78
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTGeneratornear.ogg"
+  max_dist: 9075
+  max_vol: 8500
+  min_vol: -60000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 10
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
   index: 79
 }
 sfx_defs {
   filename: "Twi\\av8b.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1048,6 +1113,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\e2.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1057,6 +1123,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\e3.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1066,6 +1133,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f4.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1075,6 +1143,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f14.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1084,6 +1153,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f15.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1093,6 +1163,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\hawk.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1102,6 +1173,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\nikescr.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1110,6 +1182,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\j5.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1119,6 +1192,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\j7.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1128,6 +1202,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\nikeacq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1137,6 +1212,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\nike.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1146,6 +1222,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\patriotsrc.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1154,6 +1231,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa2.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1163,6 +1241,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa3.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1172,6 +1251,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa4.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1181,6 +1261,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa5.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1190,6 +1271,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa6.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1199,6 +1281,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa8.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1208,6 +1291,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa15acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1216,6 +1300,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa11acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1224,6 +1309,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa11.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1233,6 +1319,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\slotback.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1242,6 +1329,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\su15.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1251,24 +1339,25 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\ecsstart.ogg"
   max_dist: 99999
-  max_vol: -2200
+  max_vol: 50
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: HIGH_PRIORITY
-  sound_group: GROUP_COCKPIT
+  sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -2200
   index: 104
 }
 sfx_defs {
   filename: "Common\\fireloop.ogg"
-  max_dist: 300
+  max_dist: 9999999
+  max_vol: 700
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 10
+  min_3d_dist: 400
   index: 105
 }
 sfx_defs {
@@ -1297,81 +1386,81 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\rocket.ogg"
-  max_dist: 12000
+  max_dist: 9999999
   max_vol: 1000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 20
+  min_3d_dist: 100
   cone_outside_vol: 1000
   index: 108
 }
 sfx_defs {
   filename: "Common\\impactg1.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 109
 }
 sfx_defs {
   filename: "Common\\impactg2.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 110
 }
 sfx_defs {
   filename: "Common\\impactg3.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 111
 }
 sfx_defs {
   filename: "Common\\impactg4.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 112
 }
 sfx_defs {
   filename: "Common\\impactg5.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 113
 }
 sfx_defs {
   filename: "Common\\impactg6.ogg"
-  max_dist: 30300
+  max_dist: 99999999
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
-  cone_outside_vol: 2000
+  min_3d_dist: 3000
+  cone_outside_vol: 1500
   index: 114
 }
 sfx_defs {
@@ -1400,6 +1489,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 117
@@ -1410,6 +1500,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 118
@@ -1420,6 +1511,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 119
@@ -1460,6 +1552,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 123
@@ -1535,21 +1628,38 @@ sfx_defs {
   index: 130
 }
 sfx_defs {
-  filename: "Common\\flareint.ogg"
-  max_dist: 99999
-  max_vol: -1000
-  min_vol: -10000
-  primary_flag: INTERNAL_SOUND
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2AFBnoise.ogg"
+  max_dist: 19257
+  max_vol: 4900
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
-  sound_group: GROUP_SOUND_FX
-  cone_outside_vol: -1000
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 132
   index: 131
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXT1back.ogg"
+  max_dist: 9075
+  max_vol: 500
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 452
   index: 132
 }
 sfx_defs {
@@ -1584,33 +1694,33 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\ecsend.ogg"
   max_dist: 99999
-  max_vol: -2200
+  max_vol: 50
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: HIGH_PRIORITY
-  sound_group: GROUP_COCKPIT
+  sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -2200
+  linked_sound_id: 439
   index: 136
 }
 sfx_defs {
   filename: "Common\\wind.ogg"
   max_dist: 99999
-  max_vol: -500
+  max_vol: -80
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
-  secondary_flags: LOW_PRIORITY
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
   cone_outside_vol: -500
   index: 137
 }
 sfx_defs {
   filename: "Common\\flareext.ogg"
-  max_dist: 6000
+  max_dist: 500
   max_vol: 2000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
-  secondary_flags: HIGH_PRIORITY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
   min_3d_dist: 50
@@ -1619,44 +1729,49 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\airbrakeend.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 139
 }
 sfx_defs {
   filename: "Common\\airbrakeloop.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 140
 }
 sfx_defs {
   filename: "Common\\airbrakestart.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 141
 }
 sfx_defs {
   filename: "Common\\airbrakewind.ogg"
-  max_dist: 99999
-  max_vol: -500
-  min_vol: -10000
-  primary_flag: INTERNAL_SOUND
+  max_dist: 12000
+  min_vol: -100
+  max_vol: 4600
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
-  cone_outside_vol: -500
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 448
   index: 142
 }
 sfx_defs {
@@ -1762,6 +1877,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\barlock.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1770,6 +1886,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\firecan.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1778,6 +1895,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\flatface.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1786,6 +1904,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\straightflush.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1794,6 +1913,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\lowblow.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1802,6 +1922,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\hawkscr.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1810,6 +1931,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\hawkacq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1818,6 +1940,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\patriotacq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1826,6 +1949,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\spoonrest.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1834,6 +1958,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\tps63.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1843,6 +1968,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\f16.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1852,6 +1978,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\longtrack.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1860,6 +1987,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\gundish.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -1868,6 +1996,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\amraam.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1877,6 +2006,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\phoenix.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -1885,9 +2015,9 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\lspdtone.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   sound_group: GROUP_INTERCOM
@@ -1896,15 +2026,16 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\tailscrape.ogg"
-  max_dist: 6000
-  max_vol: 1000
+  max_dist: 99900
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
   min_3d_dist: 50
   cone_outside_vol: 1000
+  linked_sound_id: 451
   index: 168
 }
 sfx_defs {
@@ -1972,27 +2103,47 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\gearwind.ogg"
-  max_dist: 99999
-  max_vol: 500
-  min_vol: -10000
-  primary_flag: INTERNAL_SOUND
+  max_dist: 12000
+  min_vol: -100
+  max_vol: 4600
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
-  cone_outside_vol: 500
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
   index: 175
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\fighter\\f-16\\f16sndext3-close.ogg"
+  max_dist: 3000
+  max_vol: 3500
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 469
   index: 176
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16jfsdoors.ogg"
+  max_dist: 12000
+  max_vol: 7000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
   index: 177
 }
 sfx_defs {
@@ -2008,18 +2159,21 @@ sfx_defs {
 sfx_defs {
   filename: "Common\\jetblast.ogg"
   max_dist: 99999
+  max_vol: 1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: LOOP
   sound_group: GROUP_SOUND_FX
   index: 179
 }
 sfx_defs {
   filename: "Cockpit\\counter.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
-  primary_flag: INTERNAL_SOUND
+  max_vol: 500
+  primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 180
@@ -2038,9 +2192,9 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\iffmode4monitor.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
@@ -2048,30 +2202,33 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\chaflare.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 183
 }
 sfx_defs {
   filename: "Cockpit\\low.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 184
 }
 sfx_defs {
   filename: "Cockpit\\out.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 185
@@ -2080,6 +2237,7 @@ sfx_defs {
   filename: "Cockpit\\aim9envgnd.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -2090,6 +2248,7 @@ sfx_defs {
   filename: "Cockpit\\aim9envsky.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -2098,11 +2257,12 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\thunder.ogg"
-  max_dist: 60000
+  max_dist: 999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 500
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 5800
   index: 188
 }
 sfx_defs {
@@ -2130,9 +2290,11 @@ sfx_defs {
   max_vol: -1500
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   secondary_flags: LOOP
   sound_group: GROUP_SOUND_FX
   cone_outside_vol: -1500
+  linked_sound_id: 432
   index: 191
 }
 sfx_defs {
@@ -2141,45 +2303,48 @@ sfx_defs {
   max_vol: -1500
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   secondary_flags: LOOP
   sound_group: GROUP_SOUND_FX
   cone_outside_vol: -1500
+  linked_sound_id: 453
   index: 192
 }
 sfx_defs {
   filename: "Common\\hookend.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 193
 }
 sfx_defs {
   filename: "Common\\hookloop.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 194
 }
 sfx_defs {
   filename: "Common\\hookstart.ogg"
-  max_dist: 300
+  max_dist: 99999999
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOW_PRIORITY
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 5
+  min_3d_dist: 80
   index: 195
 }
 sfx_defs {
   filename: "Twi\\flaplid.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2188,6 +2353,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\tombstone.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2196,6 +2362,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\clamshell.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2204,6 +2371,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\bigbird.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2212,6 +2380,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\skyguard.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -2221,6 +2390,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\tallking.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2229,6 +2399,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sidenet.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2237,6 +2408,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\backnet.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2245,6 +2417,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\snowdrift.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2253,6 +2426,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\grillpan.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -2262,6 +2436,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\billboard.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -2271,6 +2446,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\highscreen.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -2278,8 +2454,9 @@ sfx_defs {
   index: 207
 }
 sfx_defs {
-  filename: "Twi\\oddgroup.ogg"
+  filename: "Twi\\oddpair.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -2289,6 +2466,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\pathand.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2297,6 +2475,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\thinskin.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2305,6 +2484,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\tinshield.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2313,6 +2493,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ksam.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2321,6 +2502,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\flapwheel.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2329,6 +2511,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\dogear.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2337,6 +2520,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\bigback.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2345,6 +2529,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa5acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -2445,7 +2630,7 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Engines\\Fighter\\burner-small.ogg"
-  max_dist: 60000
+  max_dist: 100000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
@@ -2453,7 +2638,7 @@ sfx_defs {
   secondary_flags: HIGH_PRIORITY
   secondary_flags: REVERSE_DOPPLER
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 150
+  min_3d_dist: 800
   cone_inside_angle_deg: 140
   cone_outside_angle_deg: 100
   cone_outside_vol: -1500
@@ -2463,21 +2648,23 @@ sfx_defs {
   filename: "Engines\\Fighter\\burner-med.ogg"
   max_dist: 60000
   min_vol: -10000
+  max_vol:  1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
-  secondary_flags: REVERSE_DOPPLER
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 150
-  cone_inside_angle_deg: 140
-  cone_outside_angle_deg: 100
-  cone_outside_vol: -1500
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 800
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
+  linked_sound_id: 441
   index: 225
 }
 sfx_defs {
   filename: "Engines\\Fighter\\burner-large.ogg"
-  max_dist: 60000
+  max_dist: 180000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
@@ -2485,7 +2672,7 @@ sfx_defs {
   secondary_flags: HIGH_PRIORITY
   secondary_flags: REVERSE_DOPPLER
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 150
+  min_3d_dist: 800
   cone_inside_angle_deg: 140
   cone_outside_angle_deg: 100
   cone_outside_vol: -1500
@@ -2695,6 +2882,7 @@ sfx_defs {
   filename: "Engines\\Prop\\quad.ogg"
   max_dist: 60000
   min_vol: -10000
+  max_vol: 1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -2702,12 +2890,14 @@ sfx_defs {
   min_3d_dist: 50
   cone_outside_angle_deg: 160
   cone_outside_vol: -500
+  linked_sound_id: 465
   index: 243
 }
 sfx_defs {
   filename: "Engines\\Prop\\quad-large.ogg"
   max_dist: 60000
   min_vol: -10000
+  max_vol: 1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -2721,6 +2911,7 @@ sfx_defs {
   filename: "Engines\\Internal\\fighter-small.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 1000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -2929,17 +3120,37 @@ sfx_defs {
   index: 263
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontAFBstart.ogg"
+  max_dist: 200000
+  max_vol: 1000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 265
   index: 264
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndabextstart.ogg"
+  max_dist: 99999999
+  max_vol: 1000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1900
+  cone_inside_angle_deg: 110
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2000
   index: 265
 }
 sfx_defs {
@@ -2953,7 +3164,7 @@ sfx_defs {
   secondary_flags: LOW_PRIORITY
   secondary_flags: CONE_EFFECT
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 20
+  min_3d_dist: 40
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 0
   cone_outside_vol: -500
@@ -2970,7 +3181,7 @@ sfx_defs {
   secondary_flags: LOW_PRIORITY
   secondary_flags: CONE_EFFECT
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 30
+  min_3d_dist: 60
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 0
   cone_outside_vol: -500
@@ -2987,7 +3198,7 @@ sfx_defs {
   secondary_flags: LOW_PRIORITY
   secondary_flags: CONE_EFFECT
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 40
+  min_3d_dist: 80
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 0
   cone_outside_vol: -500
@@ -3004,7 +3215,7 @@ sfx_defs {
   secondary_flags: LOW_PRIORITY
   secondary_flags: CONE_EFFECT
   sound_group: GROUP_SOUND_FX
-  min_3d_dist: 50
+  min_3d_dist: 100
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 0
   cone_outside_vol: -500
@@ -3012,19 +3223,20 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\vms-test.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
   secondary_flags: LOOP
   sound_group: GROUP_INTERCOM
+  secondary_flags: HIGH_PRIORITY
   cone_outside_vol: -950
   index: 270
 }
 sfx_defs {
   filename: "Cockpit\\canopyopenstart.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_COCKPIT
@@ -3035,7 +3247,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\canopyopenend.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_COCKPIT
@@ -3068,7 +3280,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\canopyopenloop.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   secondary_flags: LOOP
@@ -3078,34 +3290,39 @@ sfx_defs {
   index: 275
 }
 sfx_defs {
-  filename: "Engines\\Fighter\\F-16\\f16sndext2.ogg"
-  max_dist: 12000
-  min_vol: -10000
+  filename: "Engines\\Fighter\\F-16\\f16sndextGenLess2.ogg"
+  max_dist: 9100
+  min_vol: -120000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 10
+  min_3d_dist: 380
   cone_inside_angle_deg: 45
-  cone_outside_angle_deg: 100
-  cone_outside_vol: -2500
+  cone_outside_angle_deg: 70
+  cone_outside_vol: -1500
   index: 276
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndint5.ogg"
+  max_dist: 999999
+  max_vol:  450
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
+  linked_sound_id: 264
   index: 277
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndint2.ogg"
   max_dist: 99999
+  max_vol: 300
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_ENGINE_INTERNAL
   index: 278
@@ -3114,9 +3331,9 @@ sfx_defs {
   filename: "Cockpit\\aim9pcaged.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_IR_TONE
   index: 279
 }
@@ -3124,137 +3341,162 @@ sfx_defs {
   filename: "Cockpit\\aim9puncaged.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_IR_TONE
   index: 280
 }
 sfx_defs {
   filename: "Common\\rumble.ogg"
-  max_dist: 6000
+  max_dist: 600000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   sound_group: GROUP_SOUND_FX
   min_3d_dist: 50
+  linked_sound_id: 299
   index: 281
 }
 sfx_defs {
   filename: "Common\\sonicboom.ogg"
-  max_dist: 60000
+  max_dist: 9999999
+  max_vol:7000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
-  secondary_flags: LOOP
-  secondary_flags: LOW_PRIORITY
+  secondary_flags: HIGH_PRIORITY
   index: 282
 }
 sfx_defs {
   filename: "Cockpit\\outermarker.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 9999999
   min_vol: -10000
+  max_vol: 700
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   sound_group: GROUP_INTERCOM
+  min_3d_dist: 280
   cone_outside_vol: -950
   index: 283
 }
 sfx_defs {
   filename: "Cockpit\\middlemarker.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 9999999
   min_vol: -10000
+  max_vol: 700
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   sound_group: GROUP_INTERCOM
+  min_3d_dist: 280
   cone_outside_vol: -950
   index: 284
 }
 sfx_defs {
-  filename: "Common\\breathcalm.ogg"
-  max_dist: 99999
-  max_vol: -1000
-  min_vol: -10000
-  primary_flag: INTERNAL_SOUND
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2noise.ogg"
+  max_dist: 10257
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -1000
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 20
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 471
   index: 285
 }
 sfx_defs {
   filename: "Common\\breathfast.ogg"
-  max_dist: 99999
-  max_vol: -800
+  max_dist: 200000
+  max_vol: 1600
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -800
+  sound_group: GROUP_COCKPIT
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
   index: 286
 }
 sfx_defs {
   filename: "Common\\breathshort.ogg"
-  max_dist: 99999
-  max_vol: -600
+  max_dist: 200000
+  max_vol: 1600
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -600
+  sound_group: GROUP_COCKPIT
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
+  linked_sound_id: 447
   index: 287
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsstart.ogg"
-  max_dist: 6000
-  max_vol: -1500
-  min_vol: -10000
+  max_dist: 12000
+  max_vol: 3500
+  min_vol: -7500
   primary_flag: EXTERNAL_SOUND_ATTENUATED
-  min_3d_dist: 20
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
   cone_outside_vol: -1500
+ linked_sound_id: 78
   index: 288
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsloop.ogg"
-  max_dist: 6000
-  max_vol: -1500
-  min_vol: -10000
+  max_dist: 12000
+  max_vol: 5000
+  min_vol: -7500
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
-  min_3d_dist: 20
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
   cone_outside_vol: -1500
+  linked_sound_id: 452
   index: 289
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsend.ogg"
-  max_dist: 6000
-  max_vol: -1500
-  min_vol: -10000
+  max_dist: 12000
+  max_vol: 3500
+  min_vol: -7500
   primary_flag: EXTERNAL_SOUND_ATTENUATED
-  min_3d_dist: 20
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
   cone_outside_vol: -1500
+ linked_sound_id: 177
   index: 290
 }
 sfx_defs {
   filename: "Cockpit\\data.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 291
 }
 sfx_defs {
   filename: "Cockpit\\modem.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 292
@@ -3262,6 +3504,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa6acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3270,6 +3513,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa8acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3278,6 +3522,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\gundishacq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3286,32 +3531,41 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\sa2acq.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
   index: 296
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndintcompressor.ogg"
+  max_dist: 9999999
+  max_vol:  775
+  min_vol: -1000000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
   index: 297
 }
 sfx_defs {
   filename: "Common\\airflowcanopy.ogg"
-  max_dist: 99999
+  max_dist: 99900
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_SOUND_FX
+  min_3d_dist: 800
+  cone_outside_vol: -1500
+  linked_sound_id: 472
   index: 298
 }
 sfx_defs {
   filename: "Common\\aoalowspeed.ogg"
-  max_dist: 99999
+  max_dist: 99000
   max_vol: -450
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
@@ -3323,7 +3577,7 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Common\\aoahighspeed.ogg"
-  max_dist: 99999
+  max_dist: 99000
   max_vol: -400
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
@@ -3335,10 +3589,11 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Cockpit\\to_l-beeps.ogg"
-  max_dist: 99999
-  max_vol: -950
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   secondary_flags: LOOP
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
@@ -3346,7 +3601,7 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Engines\\Fighter\\M2k\\m2kabext.ogg"
-  max_dist: 15200
+  max_dist: 999000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
@@ -3362,10 +3617,11 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16sndint3.ogg"
   max_dist: 99999
+  max_vol:  450
   min_vol: -10000
+  secondary_flags: ADJUSTABLE_FREQUENCY
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_ENGINE_INTERNAL
   index: 303
@@ -3373,7 +3629,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\altvibrator.ogg"
   max_dist: 99999
-  max_vol: -2000
+  max_vol: -1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -3388,6 +3644,7 @@ sfx_defs {
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -2000
@@ -3396,9 +3653,10 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsstartint.ogg"
   max_dist: 99999
-  max_vol: -300
+  max_vol: 100
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -300
   index: 306
@@ -3406,9 +3664,10 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsloopint.ogg"
   max_dist: 99999
-  max_vol: -300
+  max_vol: 115
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   secondary_flags: LOOP
   sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -300
@@ -3417,9 +3676,10 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Fighter\\F-16\\f16jfsendint.ogg"
   max_dist: 99999
-  max_vol: -300
+  max_vol: 100
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -300
   index: 308
@@ -3430,6 +3690,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 309
@@ -3457,7 +3718,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\pushbutton_in.ogg"
   max_dist: 99999
-  max_vol: 208
+  max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_COCKPIT
@@ -3467,7 +3728,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\pushbutton_out.ogg"
   max_dist: 99999
-  max_vol: 208
+  max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_COCKPIT
@@ -3477,7 +3738,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\pushbutton.ogg"
   max_dist: 99999
-  max_vol: 208
+  max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_COCKPIT
@@ -3490,6 +3751,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 315
@@ -3550,6 +3812,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 321
@@ -3560,6 +3823,7 @@ sfx_defs {
   max_vol: -208
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   cone_outside_vol: -208
   index: 322
@@ -3600,17 +3864,18 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-18\\f18sndext1.ogg"
-  max_dist: 2000
-  max_vol: -500
+  max_dist: 12000
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 100
-  cone_outside_vol: -2000
+  cone_outside_vol: -1500
+  linked_sound_id: 441
   index: 327
 }
 sfx_defs {
@@ -3689,7 +3954,7 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Engines\\Fighter\\F-18\\f18sndext2.ogg"
-  max_dist: 2000
+  max_dist: 12000
   max_vol: -1300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
@@ -3697,9 +3962,10 @@ sfx_defs {
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
-  cone_inside_angle_deg: 45
+  min_3d_dist: 180
+  cone_inside_angle_deg: 70
   cone_outside_angle_deg: 100
-  cone_outside_vol: -2000
+  cone_outside_vol: -1500
   index: 335
 }
 sfx_defs {
@@ -3772,11 +4038,13 @@ sfx_defs {
   cone_inside_angle_deg: 140
   cone_outside_angle_deg: 100
   cone_outside_vol: -1500
+  linked_sound_id: 459
   index: 341
 }
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_Test.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -3786,6 +4054,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR93\\ALR93_NewGuy.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3794,6 +4063,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR69\\ALR69_Lock.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3802,6 +4072,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR69\\ALR69_Launch.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3810,6 +4081,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_NewAA.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3818,6 +4090,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_NewAG.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3826,6 +4099,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR69\\ALR69_ThreeBeeps.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3875,6 +4149,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR67V3\\ALR67V3_NewGuy.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3883,6 +4158,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR93\\ALR93_Launch.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3891,6 +4167,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR67V3\\ALR67V3_Lock.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3899,6 +4176,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR67V3\\ALR67V3_Launch.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3907,6 +4185,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_LaunchRecycle.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3915,6 +4194,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR69\\ALR69_LaunchRecycle.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3923,6 +4203,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR69\\ALR69_SelfTest.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -3983,12 +4264,13 @@ sfx_defs {
   filename: "Engines\\Jet\\kc10.ogg"
   max_dist: 12000
   min_vol: -10000
+  max_vol: 1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 10
+  min_3d_dist: 380
   cone_inside_angle_deg: 20
   cone_outside_angle_deg: 100
   cone_outside_vol: -2500
@@ -3998,6 +4280,7 @@ sfx_defs {
   filename: "Engines\\Jet\\kc10sndext.ogg"
   max_dist: 60000
   min_vol: -10000
+  max_vol: 1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -4007,11 +4290,13 @@ sfx_defs {
   cone_inside_angle_deg: 180
   cone_outside_angle_deg: 100
   cone_outside_vol: -2500
+  linked_sound_id: 465
   index: 366
 }
 sfx_defs {
   filename: "Twi\\ALR93\\ALR93_Spike.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4033,6 +4318,7 @@ sfx_defs {
 sfx_defs {
   filename: "Engines\\Jet\\kc135.ogg"
   max_dist: 3000
+  max_vol: 1000
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
@@ -4048,6 +4334,7 @@ sfx_defs {
   filename: "Engines\\Jet\\sndsuc.ogg"
   max_dist: 2000
   min_vol: -10000
+  max_vol: 1000
   primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
   secondary_flags: HIGH_PRIORITY
@@ -4059,20 +4346,24 @@ sfx_defs {
 }
 sfx_defs {
   filename: "Engines\\fighter\\f-16\\f16sndext3.ogg"
-  max_dist: 12000
+  max_dist: 999999
+  max_vol: 880
   min_vol: -10000
-  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
   secondary_flags: LOOP
   secondary_flags: HIGH_PRIORITY
   secondary_flags: CONE_EFFECT
-  min_3d_dist: 10
+  min_3d_dist: 880
   cone_inside_angle_deg: 70
-  cone_outside_vol: -2500
+  cone_outside_vol: -1500
+  linked_sound_id: 434
   index: 371
 }
 sfx_defs {
   filename: "Twi\\SPS1000\\SPS1000_LAUNCH.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4081,6 +4372,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\SPS1000\\SPS1000_NEWGUY.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4089,6 +4381,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\SPS1000\\SPS1000_SYSTEST.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
@@ -4250,10 +4543,19 @@ sfx_defs {
   index: 386
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\F-16\\f16sndext2noise.ogg"
+  max_dist: 10257
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 433
   index: 387
 }
 sfx_defs {
@@ -4352,6 +4654,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_Failure.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4360,6 +4663,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_1000Hz.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4368,6 +4672,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_2000Hz.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4376,6 +4681,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_500Hz.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4384,6 +4690,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_alpha.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4392,6 +4699,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_4beeps.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4400,6 +4708,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_failure.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4408,6 +4717,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\Carapace\\carapace_testok.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4416,6 +4726,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_Launch.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4424,6 +4735,7 @@ sfx_defs {
 sfx_defs {
   filename: "Twi\\ALR56\\ALR56_Lock.ogg"
   max_dist: 99999
+  max_vol:1000
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   sound_group: GROUP_RWR
@@ -4433,6 +4745,7 @@ sfx_defs {
   filename: "Cockpit\\iristweak.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -4443,6 +4756,7 @@ sfx_defs {
   filename: "Cockpit\\iristgrowl.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -4453,6 +4767,7 @@ sfx_defs {
   filename: "Cockpit\\iristuncage.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 500
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -4460,22 +4775,32 @@ sfx_defs {
   index: 409
 }
 sfx_defs {
-  filename: "Common\\none.ogg"
-  max_dist: 0
-  min_vol: 0
-  primary_flag: EXTERNAL_SOUND_INTERIOR_ONLY
+  filename: "Engines\\Fighter\\Burner-Med-dist-Around.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2500
   index: 410
 }
 sfx_defs {
   filename: "Cockpit\\ecsloop.ogg"
   max_dist: 99999
-  max_vol: -2200
+  max_vol: 50
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: HIGH_PRIORITY
-  sound_group: GROUP_COCKPIT
+  sound_group: GROUP_ENGINE_INTERNAL
   cone_outside_vol: -2200
+  linked_sound_id: 438
   index: 411
 }
 sfx_defs {
@@ -4501,17 +4826,17 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\nadiaPULLUP.ogg"
   max_dist: 99999
-  max_vol: -950
   min_vol: -10000
+  max_vol: 500
   primary_flag: VMS
   sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
   index: 414
 }
 sfx_defs {
   filename: "Cockpit\\aim9uncagedflared.ogg"
   max_dist: 99999
   min_vol: -10000
+  max_vol: 800
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
@@ -4541,6 +4866,7 @@ sfx_defs {
   max_dist: 99999
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   index: 418
 }
@@ -4549,6 +4875,7 @@ sfx_defs {
   max_dist: 99999
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_COCKPIT
   index: 419
 }
@@ -4577,7 +4904,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\canopyopenmiddlestart.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_COCKPIT
@@ -4588,7 +4915,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\canopyopenmiddleend.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   sound_group: GROUP_COCKPIT
@@ -4599,7 +4926,7 @@ sfx_defs {
 sfx_defs {
   filename: "Cockpit\\canopyopenmiddleloop.ogg"
   max_dist: 300
-  max_vol: 1000
+  max_vol: 300
   min_vol: -10000
   primary_flag: EXTERNAL_SOUND_FROM_SELF
   secondary_flags: LOOP
@@ -4623,17 +4950,18 @@ sfx_defs {
   index: 425
 }
 sfx_defs {
-  filename: "Common\\CatmHit.ogg"
-  max_dist: 99999
-  max_vol: -950
+   filename: "Cockpit\\1955.ogg"
+  max_dist: 30300
+  max_vol: 2000
   min_vol: -10000
   primary_flag: VMS
   sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  min_3d_dist: 50
+  cone_outside_vol: 2000
   index: 426
 }
 sfx_defs {
-  filename: "Common\\CatmLaunch.ogg"
+  filename: "Cockpit\\1500.ogg"
   max_dist: 99999
   max_vol: -950
   min_vol: -10000
@@ -4643,125 +4971,643 @@ sfx_defs {
   index: 427
 }
 sfx_defs {
-  filename: "Cockpit\\f15maxG2.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Common\\NozzleOpen.ogg"
+  max_dist: 6000
+  min_vol: -6000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
   index: 428
 }
 sfx_defs {
-  filename: "Cockpit\\f15maxG3.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Common\\NozzleClose.ogg"
+  max_dist: 6000
+  min_vol: -6000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
   index: 429
 }
 sfx_defs {
-  filename: "Cockpit\\OverGLimit.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Engines\\Fighter\\F-16\\f16sndextGE2.ogg"
+  max_dist: 9985
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 285
   index: 430
 }
 sfx_defs {
-  filename: "Cockpit\\f15maxYAW.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Engines\\fighter\\f-16\\f16sndabextfront.ogg"
+  max_dist: 200000
+  max_vol:  1500
+  min_vol: -999999
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 800
+  cone_inside_angle_deg: 70
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 446
   index: 431
 }
 sfx_defs {
-  filename: "Cockpit\\f15maxAOA.ogg"
-  max_dist: 99999
-  max_vol: -950
+  filename: "Cockpit\\OverSpeed.ogg"
+  max_dist: 999999
   min_vol: -10000
+  max_vol: 3900
   primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
   sound_group: GROUP_INTERCOM
   cone_outside_vol: -950
   index: 432
 }
 sfx_defs {
-  filename: "Cockpit\\f15maxG.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Engines\\Fighter\\F-16\\f16sndext2FarDis.ogg"
+  max_dist: 10150
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 40
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 132
   index: 433
 }
 sfx_defs {
-  filename: "Cockpit\\f15_loop_amad.ogg"
-  max_dist: 99999
-  max_vol: -950
+  filename: "Engines\\Fighter\\F-16\\f16sndext4.ogg"
+  max_dist: 3000
+  max_vol: 1500
   min_vol: -10000
-  primary_flag: VMS
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 450
   index: 434
 }
 sfx_defs {
-  filename: "Cockpit\\f15_loop_amad_eng.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
+  filename: "Engines\\Fighter\\F-16\\f16sndext2.ogg"
+  max_dist: 10100
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
   secondary_flags: LOOP
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 467
   index: 435
 }
 sfx_defs {
-  filename: "Cockpit\\f15_loop_full.ogg"
-  max_dist: 99999
-  max_vol: -950
-  min_vol: -10000
-  primary_flag: VMS
-  secondary_flags: LOOP
-  sound_group: GROUP_INTERCOM
-  cone_outside_vol: -950
+  filename: "Cockpit\\pushbutton.ogg"
+  max_dist: 0
+  max_vol: 0
+  min_vol: 0
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOW_PRIORITY
+  sound_group: GROUP_COCKPIT
+  cone_outside_vol: -208
+  linked_sound_id: 428
   index: 436
 }
 sfx_defs {
-  filename: "Cockpit\\Python_Lock.ogg"
-  max_dist: 99999
-  min_vol: -10000
+  filename: "Cockpit\\pushbutton2.ogg"
+  max_dist: 0
+  max_vol: 0
+  min_vol: 0
   primary_flag: INTERNAL_SOUND
-  secondary_flags: LOOP
-  secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_IR_TONE
+  sound_group: GROUP_COCKPIT
+  cone_outside_vol: -208
+  linked_sound_id: 429
   index: 437
 }
 sfx_defs {
-  filename: "Cockpit\\Python_Search.ogg"
-  max_dist: 99999
+  filename: "Cockpit\\HydrazineAir.ogg"
+  max_dist: 999999
   min_vol: -10000
-  primary_flag: INTERNAL_SOUND
-  secondary_flags: LOOP
+  max_vol: 10
+  primary_flag: VMS
   secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_IR_TONE
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
   index: 438
 }
 sfx_defs {
-  filename: "Cockpit\\Python_Pre_Lock.ogg"
+  filename: "Cockpit\\HydrazineAirBackup.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 25
+  primary_flag: VMS
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 439
+}
+sfx_defs {
+  filename: "Cockpit\\none.ogg"
+  max_dist: 0
+  max_vol: 0
+  min_vol: 0
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_COCKPIT
+  cone_outside_vol: -208
+  index: 440
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\burner-med-dist.ogg"
+  max_dist: 200000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 5800
+  cone_inside_angle_deg: 210
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -2000
+  linked_sound_id: 444
+  index: 441
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16jfsspark.ogg"
+  max_dist: 12000
+  max_vol: 6000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 452
+  index: 442
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufaSNDEXTsideGenerator.ogg"
+  max_dist: 4000
+  max_vol: 4800
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 270
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 285
+  index: 443
+}
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext6.ogg"
+  max_dist: 99900
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1880
+  cone_inside_angle_deg: 20
+  cone_outside_vol: -1500
+  linked_sound_id: 445
+  index: 444
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndext7.ogg"
   max_dist: 99999
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 800
+  cone_inside_angle_deg: 70
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 410
+  index: 445
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndabext3.ogg"
+  max_dist: 200000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 457
+  index: 446
+}
+sfx_defs {
+  filename: "Cockpit\\G-OverLimit.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 3900
+  primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 447
+}
+sfx_defs {
+  filename: "Common\\airbrakewindIn.ogg"
+  max_dist: 99999999
+  max_vol: 1600
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
+  index: 448
+}
+sfx_defs {
+  filename: "Common\\touchdownIn.ogg"
+  max_dist: 200000
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_inside_angle_deg: 70
+  cone_outside_vol: 1000
+  index: 449
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfront.ogg"
+  max_dist: 9999
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 990
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 464
+  index: 450
+}
+sfx_defs {
+  filename: "Common\\tailscrapeIN.ogg"
+  max_dist: 99999999
+  max_vol: 1600
+  min_vol: -10000
+  primary_flag: INTERNAL_SOUND
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_outside_vol: 1000
+  linked_sound_id: 453
+  index: 451
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16jfsExhaust.ogg"
+  max_dist: 1200
+  max_vol: 6500
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 130
+  cone_outside_vol: -1500
+  index: 452
+}
+sfx_defs {
+  filename: "Cockpit\\EngineFanDamage.ogg"
+  max_dist: 999999
+  min_vol: -10000
+  max_vol: 3900
+  primary_flag: VMS
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_INTERCOM
+  cone_outside_vol: -950
+  index: 453
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sufasndext2.ogg"
+  max_dist: 9985
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 380
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 443
+  index: 454
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\burner-med-near.ogg"
+  max_dist: 60000
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 280
+  cone_inside_angle_deg: 140
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  index: 455
+}
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndextdistantfrontAFB-roar.ogg"
+  max_dist: 200000
+  min_vol: -100000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 8800
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 131
+  index: 456
+}
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext5.ogg"
+  max_dist: 99900
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1880
+  cone_inside_angle_deg: 20
+  cone_outside_vol: -1500
+  linked_sound_id: 463
+  index: 457
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantAroundAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 461
+  index: 458
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTGenerator.ogg"
+  max_dist: 9075
+  max_vol: 4500
+  min_vol: -1000000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 180
+  cone_inside_angle_deg: 190
+  cone_outside_angle_deg: 135
+  cone_outside_vol: -1500
+  linked_sound_id: 79
+  index: 459
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndintGenerator.ogg"
+  max_dist: 99999
+  max_vol: 450
   min_vol: -10000
   primary_flag: INTERNAL_SOUND
   secondary_flags: LOOP
   secondary_flags: ADJUSTABLE_FREQUENCY
-  sound_group: GROUP_IR_TONE
-  index: 439
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_ENGINE_INTERNAL
+  cone_outside_vol: -2200
+  index: 460
 }
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextbackdistantAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 462
+  index: 461
+}
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext2AFB-takeOff.ogg"
+  max_dist: 200000
+  min_vol: -1000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  min_3d_dist: 380
+  cone_inside_angle_deg: 110
+  cone_outside_vol: -1500
+  linked_sound_id: 456
+  index: 462
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontAFB.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 458
+  index: 463
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantAround.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 5600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 465
+  index: 464
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextbackdistant.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 180
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 466
+  index: 465
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextMiddistantfront.ogg"
+  max_dist: 200000
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 4600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  linked_sound_id: 16
+  index: 466
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16SNDEXTsideGenerator.ogg"
+  max_dist: 3000
+  max_vol:  3500
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 80
+  cone_inside_angle_deg: 45
+  cone_outside_vol: -1500
+  linked_sound_id: 387
+  index: 467
+}
+sfx_defs {
+  filename: "Engines\\Fighter\\F-16\\f16sndextdistantfrontClose.ogg"
+  max_dist: 3300
+  min_vol: -2500
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: LOW_PRIORITY
+  secondary_flags: REVERSE_DOPPLER
+  secondary_flags: CONE_EFFECT
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  index: 468
+}
+sfx_defs {
+  filename: "Engines\\fighter\\f-16\\f16sndext3-roar.ogg"
+  max_dist: 12000
+  max_vol: 1000
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 180
+  cone_inside_angle_deg: 75
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  linked_sound_id: 468
+  index: 469
+}
+  filename: "Common\\AirPlaneMoveWind.ogg"
+  max_dist: 200000
+  max_vol: -500
+  min_vol: -10000
+  primary_flag: EXTERNAL_SOUND_EXTERIOR_ONLY
+  secondary_flags: LOOP
+  secondary_flags: HIGH_PRIORITY
+  sound_group: GROUP_SOUND_FX
+  cone_outside_vol: 90
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -2500
+  index: 471
+}
+sfx_defs {
+  filename: "Common\\HighSpeedAirflow.ogg"
+  max_dist: 16000
+  min_vol: -120000
+  primary_flag: EXTERNAL_SOUND_ATTENUATED
+  secondary_flags: LOOP
+  secondary_flags: ADJUSTABLE_FREQUENCY
+  secondary_flags: HIGH_PRIORITY
+  secondary_flags: CONE_EFFECT
+  secondary_flags: REVERSE_DOPPLER
+  min_3d_dist: 1600
+  cone_inside_angle_deg: 45
+  cone_outside_angle_deg: 100
+  cone_outside_vol: -1500
+  index: 472
