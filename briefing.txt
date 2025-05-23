@@ -1,0 +1,158 @@
+--------------------------------------------------------
+BRIEFING RECORD generated at 5/23/2025 17:43:20.
+Mission Overview:
+
+	Weasel3 (SEAD -- Diverted,  old mission: DUMMY_02) 
+
+	Package #:	4958 (Suppression of Enemy Air Defenses) 
+	Pkg-Mission:	NOT A PACKAGE MISSION
+	Target Area:	2 nm north of Chongdan City.
+	Time on Target: 	21:01:34z
+
+	 	Sunrise:	21:01:55z(06:01:55l) 
+	Sunset:	10:10:04z(19:10:04l)  
+
+Pilot Roster:
+
+	Callsign:	Flt Lead:	Wing Two:	Elem Lead:	Elem Two:
+
+	Weasel3	2Lt. fooleranto
+
+Package Elements: 	x  = Primary Flight
+
+	Callsign:	 Flt #:	Role:	Aircraft:	Task:
+
+	Weasel3	4959 (x ) 	SEAD	1 F-16CM-50 	Protect package from enemy air defenses
+	 	T/O: 20:48:16z	Push: 21:00:19z	Tgt: 21:02:39z	IFF: M124/103/23554/36630
+	
+Threat Analysis:
+
+	Air-to-Air Threats:
+	No enemy air response is anticipated.
+
+	Surface-To-Air Threats:
+	There are no known enemy air defense assets along your flight path.
+
+Steerpoints:
+
+	#:	Desc:	Time:		Dist:		Head:		Cas:		Alt:	Action:	Form:	Comments:
+
+	1	Takeoff	20:48:16z		--		--		--		--	Climb immediate	Wedge	Takeoff
+	2	--	20:51:06z		18.0		41		275		22.0M	--	Wedge	--
+	3	Holding Pt	20:56:52z		39.6		28		300		22.0M	--	Wedge	Hold  (Departure: 20:56:52z)
+	4	Push	21:00:19z		23.7		35		300		22.0M	Descend immediate	Wedge	Rendezvous with package
+	5	SEAD	21:02:39z		18.7		33		370		19.0M	Climb immediate	Wedge	Engage enemy air defenses
+	6	SEAD	21:07:31z		38.9		294		365		20.0M	Climb delayed	Wedge	Engage enemy air defenses
+	7	Split	21:10:32z		24.2		209		365		21.0M	--	Wedge	Depart from package
+	8	--	21:20:31z		79.8		191		360		21.0M	Descend delayed	Wedge	--
+	9	Land	21:21:40z		9.2		90		360		--	--	Wedge	Land
+	10	Land	--		--		--		--		--	--	Wedge	Land (Alternate)
+
+Comm Ladder:
+ 
+	Agency:	Callsign:	Uhf [Chnl]:	Vhf [Chnl]:	Notes:
+ 
+	Intra-Flight:	Weasel3	268.650 MHz [15]	143.300 MHz [15]	Flight Management Comms
+ 
+	Guard:	None	243.000 MHz 	121.500 MHz 	Distress / Emergency
+	Common:	None	339.750 MHz [14]	119.500 MHz [13]	Advisory / UNICOM
+	Base Ops:	None	272.700 MHz [1]	--	Homeplate Operations
+ 
+	Tactical:	None	348.700 MHz [6]	--	Package Comms 
+ 
+	Dep Atis:	Osan ATIS	--	132.125 MHz [2]	Departure Airbase
+	Dep Ground:	Osan Ground	253.700 MHz [2]	--	Departure Airbase
+	Dep Tower:	Osan Tower	308.800 MHz [3]	122.100 MHz [3]	Departure Airbase
+	Dep Departure:	Osan Departure	306.300 MHz [4]	--	Departure Airbase
+ 
+	Arr Atis:	Osan ATIS	--	132.125 MHz [2]	Recovery Airbase
+	Arr Approach:	Osan Approach	306.300 MHz [4]	--	Recovery Airbase
+	Arr Tower:	Osan Tower	308.800 MHz [3]	122.100 MHz [3]	Recovery Airbase
+	Arr Ground:	Osan Ground	253.700 MHz [2]	--	Recovery Airbase
+ 
+	Alt Atis:	Pyeongtaek ATIS	--	128.250 MHz [10]	Alternate Airbase
+	Alt Approach:	Pyeongtaek Approach	363.100 MHz [10]	--	Alternate Airbase
+	Alt Tower:	Pyeongtaek Tower	257.800 MHz [11]	122.500 MHz [11]	Alternate Airbase
+	Alt Ground:	Pyeongtaek Ground	229.700 MHz [12]	--	Alternate Airbase
+
+Iff
+
+	GENERAL:
+	Initial STAT Settings:	Modes Active: M124	Codes:	M1: 30	M2: 3554	M3: 1530
+	M4 Validity Time (Until):	Key A: Day2 00:00z	Key B: Day3 00:00z
+	IFF Policy:	M1: per team	M2: per aircraft	M3: per aircraft
+	Code Change Setting:	TIM
+
+	TIME EVENTS:
+	Rot/day:	21:00z	22:00z	23:00z	00:00z	01:00z	02:00z	03:00z	04:00z	05:00z	06:00z	07:00z	08:00z
+
+	M1:	24	03	21	71	31	31	62	71	23	52	32	42	52
+	M3:	24	6630	2530	7204	2604	5730	7354	3004	1230	4204	0030	6454	1004
+	M4:	1	A	A	A	B	B	B	B	B	B	B	B	B
+
+	POS EVENTS:
+	Ingress: M124 / -----	Egress: M124 / -----
+
+Link 16
+
+	FILE A:
+	Flt Lead: No	Ext. Time Ref.: No	Callsign: CN	Number: 62
+	STNS  	#1   	#2   	#3   	#4   	#5   	#6   	#7   	#8   	Channels
+	Donor 	00000	00000	00000	00000	00000	00000	00000	00000	Voice A:	000	Mission:	124
+	Team  	00000	00000	00000	00000	---- 	---- 	---- 	---- 	Voice B:	000	Fighter:	087
+	Flight	66671	66672	00000	00000	---- 	---- 	---- 	---- 	TACAN:  	000X	Special:	---
+
+	FILE B:
+	Flt Lead: No	Ext. Time Ref.: No	Callsign: 	Number: 00
+	STNS  	#1   	#2   	#3   	#4   	#5   	#6   	#7   	#8   	Channels
+	Donor 	00000	00000	00000	00000	00000	00000	00000	00000	Voice A:	000	Mission:	000
+	Team  	00000	00000	00000	00000	---- 	---- 	---- 	---- 	Voice B:	000	Fighter:	000
+	Flight	00000	00000	00000	00000	---- 	---- 	---- 	---- 	TACAN:  	000X	Special:	000
+
+Ordnance:
+
+	Callsign:	Flt Lead:	Wing Two:	Elem Lead:	Elem Two:
+
+	 	Weasel3	-- Weasel31 --
+	510x 20mm M61
+	2x AIM-120C AMRAAM
+	2x AIM-9X Sidewinder
+	2x AGM-88 HARM
+	2x Tank 370gal
+	1x AN/ALQ-184
+	1x AN/ASQ-213 HTS
+	1x AN/AAQ-33 SNIPER
+
+Weather:
+
+	Conditions@ 	Take Off:	Target Area:	Landing:
+
+	Situation: 	Sunny	Sunny	Sunny
+	Wind:	180deg@ 4kts.	180deg@ 4kts.	180deg@ 4kts.
+	Visibility:	59km	59km	59km
+	Temp:	28deg C.	28deg C.	28deg C.
+	Cloud Base:	35,000 ft MSL base	35,000 ft MSL base	35,000 ft MSL base
+	Con Layer:	34,000 ft MSL base	34,000 ft MSL base	34,000 ft MSL base
+
+Support:
+
+	No support flights available.
+
+Emergency Procedures:
+
+	Distress call:
+	For aircrew in a hostile area, prior to ejection, transmit on the working frequency: “MAYDAY” (three times); call-sign; and position in relation to BULLSEYE.
+
+	Combat Search and Rescue:
+	In case of shoot-down, mark closest coordinates of the survivor’s position and report the incident to the CSAR assets. Establish radio communication with survivor and execute the On Scene Commander procedures.
+
+	Alternate airfield:
+	Pyeongtaek AAF (RKSG) Airbase, 20 nm south of Suwon City
+
+	Sanitise yourself and review your evasion plan of action.
+
+	Good Luck!
+
+
+END_OF_BRIEFING
+
